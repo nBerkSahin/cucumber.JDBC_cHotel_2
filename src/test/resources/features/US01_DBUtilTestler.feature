@@ -1,7 +1,14 @@
 Feature: US01 DBRead kullanıcı cHotel DB ini test eder
   @db
-  Scenario: TC01 DB Util ile Hotel DB Read test
+  Scenario: TC19 DB Util ile Concort Hotel Database Read Test
 
-    Given kullanıcı DBUtill ile cHotel DB sine baglanır
-    Given kullanıcı DBUtill ile "tHOTELROOM" tablosundaki "Price" verilerini alır
-    Given kullanıcı DBUtill ile "Price" sutunundaki 5. fiyatın 400 olduğunu test eder
+    Given kullanici DBUtill ile CHQA database'ine baglanir
+    And kullanici DBUtill ile "tHOTELROOM" tablosundaki "Price" verilerini alir
+    And kullanici DBUtill ile "Price" sutunundaki 5. fiyatin 470 oldugunu test eder
+
+
+
+  @dbupdate
+  Scenario: Kullanici tHOTEL tablosundan istedigi Emaili update eder
+    Given kullanici DBUtill ile CHQA database'ine baglanir
+    Then  DBU IDHotel degeri 1024 olan kaydin Email degerini "buisbukadar@gmail.com" yapar
